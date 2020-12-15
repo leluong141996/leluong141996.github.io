@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HIT MUTEX</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/jqvmap/jqvmap.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/dist/css/adminlte.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/daterangepicker/daterangepicker.css') }}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/plugins/summernote/summernote-bs4.min.css') }}">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a class="brand-link">
+      <img src="{{ url_for('static',filename='styles/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <strong class="brand-text font-weight-light">GAPO AI PROJECT</strong>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">BuiTrongDuong(Leader)</a>
+        </div>
+      </div>
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">LuongVanTuanAnh</a>
+        </div>
+      </div>
+      
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">LeVanLuong</a>
+        </div>
+      </div>
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">NgoGiaTien</a>
+        </div>
+      </div>
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">PhamTuanNgoc</a>
+        </div>
+      </div>
+      
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">TruongVanDung</a>
+        </div>
+      </div>
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static',filename='styles/dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">NguyenTrongNhat</a>
+        </div>
+      </div>
+
+
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">GAPO POST ANALYSIS</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <form method="post" action="/predict">
+      <section class="content">
+        <div class="container-fluid">
+          <!-- Main row -->
+          <div class="card">
+            <div class="card-body">
+              <!-- /input-group -->
+                <strong>Post URL</strong>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control rounded-0" name='url_news'>
+                  <span class="input-group-append">
+                      <input type="submit" class="btn btn-info btn-flat" value="Process" name="Process"/>
+                  </span>
+                </div>
+              <!-- /input-group -->
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="row">
+            {% if message_predict != None %}
+            <!-- Left col -->
+            <section class="col-lg-7 connectedSortable">
+              <!-- /.card -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Insight of post</h3>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="inputName">Content</label>
+                    <textarea class="form-control" style='overflow-y: scroll; width: 100%; height: 150px; resize: none;' disabled>{{ message_predict[0] }}</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputName">Image</label>
+                  </div>
+                  <div id="vert-tabs-image" role="tabpanel" aria-labelledby="vert-tabs-image-tab">
+                    <div class="row" style='overflow-y: scroll; width: 100%; height: 300px; resize: none;'>
+                      <img class="img-responsive" style='height: 100%; object-fit: cover;' src= "{{ message_predict[1] }}">
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </section>
+            <!-- /.Left col -->
+            <!-- right col (We are only adding the ID to make the widgets sortable)-->
+            <section class="col-lg-5 connectedSortable">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Result</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label for="inputName">Hashtag</label>
+                      </div>
+                      <div class="form-group">
+                        <a>{{ message_predict[2] }}</a>
+                      </div>
+                      </br>
+                      <div class="form-group">
+                        <label for="inputName">Category</label>
+                      </div>
+
+                      <div class="form-group">
+                        <a>{{ message_predict[3] }}</a>
+                      </div>
+                    </div>
+                    <!-- /.card -->
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- right col -->
+            {% endif %}
+          </div>
+          <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+      </section>
+    </form>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2020-2021 <a>ai.team@gapo</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.1.0-pre
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<!-- {{ url_for('static',filename='styles/plugins/fontawesome-free/css/all.min.css') }}" -->
+<script src="{{ url_for('static',filename='styles/plugins/jquery/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ url_for('static',filename='styles/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+
+<!-- Bootstrap 4 -->
+<script src="{{ url_for('static',filename='styles/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ url_for('static',filename='styles/plugins/chart.js/Chart.min.js') }}"></script>
+<!-- Sparkline -->
+<script src="{{ url_for('static',filename='styles/plugins/sparklines/sparkline.js') }}"></script>
+<!-- JQVMap -->
+<script src="{{ url_for('static',filename='styles/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='styles/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{ url_for('static',filename='styles/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+<!-- daterangepicker -->
+<script src="{{ url_for('static',filename='styles/plugins/moment/moment.min.js') }}"></script>
+<script src="{{ url_for('static',filename='styles/plugins/daterangepicker/daterangepicker.js') }}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{ url_for('static',filename='styles/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<!-- Summernote -->
+<script src="{{ url_for('static',filename='styles/plugins/summernote/summernote-bs4.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ url_for('static',filename='styles/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ url_for('static',filename='styles/dist/js/adminlte.js') }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ url_for('static',filename='styles/dist/js/demo.js') }}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ url_for('static',filename='styles/dist/js/pages/dashboard.js') }}"></script>
+</body>
+</html>
